@@ -54,7 +54,7 @@ if st.session_state.client:
             st.markdown(f"### 📄 Viewing: `{selected_col_name}`")
             
             # Fetch Data
-            data = list(collection.find().limit(100)) # Last 100 entries only for speed
+            data = list(collection.find().limit(3000)) # Last 100 entries only for speed
             
             if data:
                 # Convert ObjectId to String for display
